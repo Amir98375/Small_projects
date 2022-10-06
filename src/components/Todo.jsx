@@ -5,13 +5,24 @@ export const TodoApp=()=>{
     const [inpVal,setVal]=useState('')
     const [data,setData]=useState([])
     //add function
-    const handleAdd=()=>{
-        if(inpVal!==""){
-            setData([...data,inpVal])
-            setVal('')
-            console.log(data)
-        }
+    // const handleAdd=()=>{
+    //     if(inpVal!==""){
+    //         setData([...data,inpVal])
+    //         setVal('')
+    //         console.log(data)
+    //     }
         
+    // }
+    //for on key enter data
+    const onKeyEnter=(event)=>{
+        if(event.key=='Enter'){
+            if(inpVal!==""){
+                setData([...data,inpVal])
+                setVal('')
+                console.log(data)
+            }
+        }
+
     }
     //delete function
     const handledelete=(el)=>{
@@ -21,11 +32,13 @@ export const TodoApp=()=>{
     
     return(
         <>
-     <div>
+     <div className="inputtag">
      <input className="inputvalue" value={inpVal}
        onChange={(e)=>setVal(e.target.value)}
+      onKeyDown={onKeyEnter}
         placeholder="type something here "/>
-        <button className="addbutton" onClick={handleAdd}>Add </button>
+      
+        </div>
         
 
            <div>
@@ -42,7 +55,7 @@ export const TodoApp=()=>{
 
            </div>
         
-     </div>
+    
         </>
     )
 }
