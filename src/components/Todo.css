@@ -1,0 +1,32 @@
+.inputvalue{
+    height: 30px;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    color: white;
+    background-color: black;
+}
+.inputvalue:hover{
+    background-color: grey;
+    color:black;
+    font-size: larger;
+    border: none;
+    text-align: center;
+    
+}
+::placeholder{
+    color: white;
+    text-align: center;
+    font-size: larger;
+    
+}
+.addbutton{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    font-size: large;
+}

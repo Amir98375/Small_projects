@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Todo.css'
 
 export const TodoApp=()=>{
     const [inpVal,setVal]=useState('')
@@ -17,22 +18,23 @@ export const TodoApp=()=>{
          const filteredData=data.filter((items)=>items!=el)
          setData(filteredData)
     }
-    console.log(inpVal)
+    
     return(
         <>
-       <input value={inpVal}
+     <div>
+     <input className="inputvalue" value={inpVal}
        onChange={(e)=>setVal(e.target.value)}
         placeholder="type something here "/>
-        <button onClick={handleAdd}>Add </button>
+        <button className="addbutton" onClick={handleAdd}>Add </button>
         
 
            <div>
           {
                data?.map((el)=>{
                 return(
-                    <div>
-                        <p>{el}</p>
-                        <button onClick={()=>handledelete(el)}>delete</button>
+                    <div className="listmain">
+                        <p className="list">{el}</p>
+                        <button className="buttondelete" onClick={()=>handledelete(el)}>delete</button>
                     </div>
                 )
             })
@@ -40,6 +42,7 @@ export const TodoApp=()=>{
 
            </div>
         
+     </div>
         </>
     )
 }
