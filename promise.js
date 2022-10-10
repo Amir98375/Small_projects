@@ -74,3 +74,18 @@ Promise.all([p11,p12,p21,p22])
 
 // if one of the  promise has been  rejected it shows the rejected first else it shows the all resolve promise 
 
+
+//promise race is used to resolved earlier promise
+
+
+const promise1=new Promise((res,rej)=>{
+    setTimeout(res,200,'count one')
+})
+
+const promise2=new Promise((res,rej)=>{
+    setTimeout(res,100,'count two')
+})
+
+var pro=[promise1,promise2]
+Promise.race(pro)
+.then((resp)=>console.log(resp))
