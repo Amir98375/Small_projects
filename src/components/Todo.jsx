@@ -106,12 +106,14 @@ const handleEdit=(e,el)=>{
           {
                data?.map((el,ind)=>{
                 return(
-                    <div className="listmain" key={ind}>
+                    <div style={{display:"flex"}}
+                  
+                     className="listmain" key={ind}>
                         <p className="list">{el}</p>
                         <button className="buttondelete" 
                         onClick={()=>handledelete(el,ind)}>delete</button>
     
-     <div style={{display:"flex"}}
+     <div className="modal"
      >
       <Button onClick={(e)=>handleOpen(e,ind)}>Edit</Button>
       <Modal
