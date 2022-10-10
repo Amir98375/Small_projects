@@ -1,0 +1,50 @@
+.logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 140%;
+    border: 1px solid grey;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    background-color:red;
+    
+   justify-content: center;
+    padding-left: -10px;
+    
+}
+.container{
+    width: 30%;
+    margin: auto;
+   
+}
+.logoitem{
+    color: white;
+    font-size: larger;
+}
+.inputButton{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    background-color:#348feb;
+    color: white;
+    border: none;
+}
+.belowlinks{
+    display: flex;
+    justify-content: space-around;
+}
+.checkbox{
+      display: flex;
+}
+.inputTag{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin-top: 20px;
+    text-align: center;
+}
+.inputTag >::placeholder{
+    color: grey;
+}
