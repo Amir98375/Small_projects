@@ -17,14 +17,17 @@ export const SignIn = () => {
         <input className='inputTag' type="password"
         placeholder='enter your passsword' 
         /><br/>
+        <br />
         
      <div className='checkbox'><input type={"checkbox"}/> Remeber me</div>
      <br />
+     <br />
         <button className='inputButton'>Login</button>
     </form>
+    <br />
     <div className='belowlinks'>
-        <p>forgot password</p>
-        <p>dont have an account login</p>
+        <a>forgot password</a>
+        <a>dont have an account login</a>
        </div>
        <p>copyright reserve 2020</p>
     </div>

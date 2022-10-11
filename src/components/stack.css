@@ -1,0 +1,83 @@
+.stack{
+    height: 300px;
+    width: 200px;
+    border: 5px solid grey;
+    border-top: none;
+    margin: auto;
+    display: block;
+}
+
+#showMe {
+    animation: cssAnimation 0s 3s forwards;
+    visibility: hidden;
+   
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; 
+    color: maroon;}
+  
+  }
+  
+#showMe1 {
+    animation: cssAnimation 0s 4s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible;
+    color: red; }
+  
+  }
+  
+#showMe2 {
+    animation: cssAnimation 0s 5s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; }
+  
+  }
+  
+#showMe3 {
+    animation: cssAnimation 0s 6s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; }
+  
+  }
+  
+#showMe4 {
+    animation: cssAnimation 0s 7s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; }
+  
+  }
+  
+#showMe5 {
+    animation: cssAnimation 0s 8s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; }
+  
+  }
+  
+#showMe6 {
+    color: blue;
+    animation: cssAnimation 0s 9s forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes cssAnimation {
+    to   { visibility: visible; 
+    color: seagreen;}
+  
+  }
