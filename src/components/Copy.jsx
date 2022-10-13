@@ -57,11 +57,11 @@ export const Copy = () => {
         <p>{refrence.current}</p>
         <button onClick={refrenceHandler}>click me</button>
     </div>
-    <h3>counter using useRef</h3>
+    <h3>counter using useRef hooks</h3>
     <p>{counter}</p>
     <button onClick={handleIncrease}>increase</button>
     <button onClick={handleDecrease}>decrease</button>
-       <h3>Timer using useRef</h3>     
+       <h3>Timer using useRef hooks</h3>     
   </div>
   )
 }

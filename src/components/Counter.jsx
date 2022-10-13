@@ -15,6 +15,7 @@ export const Counter = () => {
     }
   return (
     <div>
+        <h3>counter using hooks</h3>
         <p>counter:{counter}</p>
 <button onClick={AddCount}>Add</button>
 <button onClick={Decrease}>Sub</button>
