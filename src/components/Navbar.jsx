@@ -14,6 +14,7 @@ export const Navbar = () => {
         <div onClick={()=>(navigate('/stack'))}>BlunderStack</div>
         <div onClick={()=>(navigate('/d&d'))}>Drag & drop</div>
         <div onClick={()=>(navigate('/copy'))}>copytext</div>
+        <div onClick={()=>(navigate('/stopwatch'))}>stopwatch</div>
       
     </div></>
   )

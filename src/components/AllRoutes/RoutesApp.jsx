@@ -7,6 +7,7 @@ import { Dragable } from '../Dragable'
 import { Navbar } from '../Navbar'
 import { SignIn } from '../SignIn'
 import { Stack } from '../Stack'
+import { StopWatch } from '../StopWatch'
 import { TodoApp } from '../Todo'
 
 export const RoutesApp = () => {
@@ -23,6 +24,7 @@ export const RoutesApp = () => {
       <Route path='/stack' element={<Stack/>}/>
       <Route path='/d&d' element={<Dragable/>}/>
       <Route path='/copy' element={<Copy/>}/>
+      <Route path='/stopwatch' element={<StopWatch/>}/>
       <Route/>
       </Routes>
     </div>

@@ -1,6 +1,10 @@
 import React, { useRef, useState } from 'react'
 
 export const Copy = () => {
+     const refrence=useRef('initialvalue')
+      const countRef=useRef(0)          
+      const [counter,setCounter]=useState(0)  
+
     const [copySuccess,setCopySucc]=useState('')
     const TextAreaRef=useRef(null)
     const copytoClipBoard=(e)=>{
@@ -8,6 +12,24 @@ export const Copy = () => {
      document.execCommand('copy')
      e.target.focus()
      setCopySucc('copied!')
+    }
+
+    const refrenceHandler=()=>{
+        console.log(refrence.current,"hello refrence")
+       const value=refrence.current
+       refrence.current="changed value"
+    }
+    const handleIncrease=()=>{
+             countRef.current++
+             setCounter(countRef.current)
+           
+    }
+    const handleDecrease=()=>{
+            if(countRef.current>0) {
+              countRef.current--
+              setCounter(countRef.current)
+            }
+            
     }
   return (
     <div>
@@ -24,9 +46,21 @@ export const Copy = () => {
     <form>
       <textarea
         ref={TextAreaRef}
-        value='Some text to copy click on copy to copy in clipboard and this will be copied'
+        value='Some text to copy click on copy to copy in
+         clipboard and this will be copied'
       ></textarea>
     </form>
+    <h3>Useref implementation below</h3>
+    <div>
+        
+        <p>{refrence.current}</p>
+        <button onClick={refrenceHandler}>click me</button>
+    </div>
+    <h3>counter using useRef</h3>
+    <p>{counter}</p>
+    <button onClick={handleIncrease}>increase</button>
+    <button onClick={handleDecrease}>decrease</button>
+            
   </div>
   )
 }
