@@ -4,6 +4,7 @@ export const Copy = () => {
      const refrence=useRef('initialvalue')
       const countRef=useRef(0)          
       const [counter,setCounter]=useState(0)  
+      
 
     const [copySuccess,setCopySucc]=useState('')
     const TextAreaRef=useRef(null)
@@ -60,7 +61,7 @@ export const Copy = () => {
     <p>{counter}</p>
     <button onClick={handleIncrease}>increase</button>
     <button onClick={handleDecrease}>decrease</button>
-            
+       <h3>Timer using useRef</h3>     
   </div>
   )
 }
