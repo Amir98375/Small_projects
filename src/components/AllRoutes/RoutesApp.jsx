@@ -1,7 +1,9 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
+import { Copy } from '../Copy'
 import { Counter } from '../Counter'
 import { CounterRedux } from '../CounterRedux'
+import { Dragable } from '../Dragable'
 import { Navbar } from '../Navbar'
 import { SignIn } from '../SignIn'
 import { Stack } from '../Stack'
@@ -19,6 +21,8 @@ export const RoutesApp = () => {
       <Route path='/countRed' element={<CounterRedux/>}/>
       <Route path='/counter' element={<Counter/>}/>
       <Route path='/stack' element={<Stack/>}/>
+      <Route path='/d&d' element={<Dragable/>}/>
+      <Route path='/copy' element={<Copy/>}/>
       <Route/>
       </Routes>
     </div>

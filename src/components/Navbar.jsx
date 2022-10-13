@@ -12,6 +12,8 @@ export const Navbar = () => {
         <div>TodoRedux</div>
         <div onClick={()=>(navigate('/signin'))}>SignIn</div>
         <div onClick={()=>(navigate('/stack'))}>BlunderStack</div>
+        <div onClick={()=>(navigate('/d&d'))}>Drag & drop</div>
+        <div onClick={()=>(navigate('/copy'))}>copytext</div>
       
     </div></>
   )
