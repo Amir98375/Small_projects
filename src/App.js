@@ -10,9 +10,9 @@ import PersistentDrawerLeft from './components/PersistentDrawer';
 function App() {
   return (
     <div className="App">
- {/* <RoutesApp/> */}
+ <RoutesApp/>
 
- <MiniDrawer/>
+ {/* <MiniDrawer/> */}
      
     </div>
   );

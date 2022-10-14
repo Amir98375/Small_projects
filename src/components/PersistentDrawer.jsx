@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useNavigate } from 'react-router';
 
 const drawerWidth = 240;
 
@@ -96,6 +97,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const navigate=useNavigate()
+
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -105,6 +108,20 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
+  const itemList = [
+    {
+      text: "Home",
+     
+      keys: "home",
+    
+    },
+    {
+      text: "Appointment",
+      
+      keys: "about",
+     
+    }
+  ];
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -142,6 +159,7 @@ export default function MiniDrawer() {
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
+
                 }}
               >
                 <ListItemIcon

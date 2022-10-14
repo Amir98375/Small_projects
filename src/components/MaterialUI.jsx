@@ -6,6 +6,7 @@ import { Typography } from '@mui/material';
 import Alert from '@mui/material/Alert'
 import { margin } from '@mui/system';
 import PersistentDrawerLeft from './PersistentDrawer';
+import MiniDrawer from './PersistentDrawer';
 
 export const MaterialUI = () => {
     const [alignment, setAlignment] = useState("");
@@ -15,7 +16,7 @@ export const MaterialUI = () => {
     }
   return (
  <>
-    <div>
+    {/* <div>
         <Button variant="text" >Text</Button>
 <Button variant="contained">Contained</Button>
 <Button variant="outlined">Outlined</Button>
@@ -52,8 +53,9 @@ sx={{color:"white"
     </div>
     </div>
     <div>
-        <PersistentDrawerLeft/>
-    </div>
+      
+    </div> */}
+    <MiniDrawer/>
  </>
   )
 }
