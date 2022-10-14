@@ -74,11 +74,8 @@ const increament=()=>{
     <p>{counter}</p>
     <button onClick={handleIncrease}>increase</button>
     <button onClick={handleDecrease}>decrease</button>
-<<<<<<< HEAD
-     
-=======
        <h3>Timer using useRef hooks</h3>     
->>>>>>> 6135562d3966b6e8e77546c2f09c2fbdf84b74a6
+
   </div>
   <div>
     <p>{countcal}</p>
