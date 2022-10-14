@@ -70,11 +70,15 @@ const increament=()=>{
         <p>{refrence.current}</p>
         <button onClick={refrenceHandler}>click me</button>
     </div>
-    <h3>counter using useRef</h3>
+    <h3>counter using useRef hooks</h3>
     <p>{counter}</p>
     <button onClick={handleIncrease}>increase</button>
     <button onClick={handleDecrease}>decrease</button>
+<<<<<<< HEAD
      
+=======
+       <h3>Timer using useRef hooks</h3>     
+>>>>>>> 6135562d3966b6e8e77546c2f09c2fbdf84b74a6
   </div>
   <div>
     <p>{countcal}</p>
