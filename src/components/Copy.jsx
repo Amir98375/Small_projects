@@ -61,7 +61,7 @@ export const Copy = () => {
     <p>{counter}</p>
     <button onClick={handleIncrease}>increase</button>
     <button onClick={handleDecrease}>decrease</button>
-       <h3>Timer using useRef</h3>     
+     
   </div>
   )
 }

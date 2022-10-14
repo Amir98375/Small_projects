@@ -4,6 +4,7 @@ import { Copy } from '../Copy'
 import { Counter } from '../Counter'
 import { CounterRedux } from '../CounterRedux'
 import { Dragable } from '../Dragable'
+import { MaterialUI } from '../MaterialUI'
 import { Navbar } from '../Navbar'
 import { SignIn } from '../SignIn'
 import { Stack } from '../Stack'
@@ -25,6 +26,7 @@ export const RoutesApp = () => {
       <Route path='/d&d' element={<Dragable/>}/>
       <Route path='/copy' element={<Copy/>}/>
       <Route path='/stopwatch' element={<StopWatch/>}/>
+      <Route path='/material' element={<MaterialUI/>}/>
       <Route/>
       </Routes>
     </div>

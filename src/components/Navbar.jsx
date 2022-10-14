@@ -9,7 +9,7 @@ export const Navbar = () => {
         <div onClick={()=>(navigate('/'))} >Todo</div>
         <div onClick={()=>(navigate('/counter'))}>Counter</div>
         <div onClick={()=>(navigate('/countRed'))}>CounterRedux</div>
-        <div>TodoRedux</div>
+        <div onClick={()=>(navigate('/material'))}>MaterialUi</div>
         <div onClick={()=>(navigate('/signin'))}>SignIn</div>
         <div onClick={()=>(navigate('/stack'))}>BlunderStack</div>
         <div onClick={()=>(navigate('/d&d'))}>Drag & drop</div>
