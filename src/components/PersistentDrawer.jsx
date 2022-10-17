@@ -19,6 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 const drawerWidth = 240;
 
@@ -96,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function MiniDrawer() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] =useState(false);
   const navigate=useNavigate()
 
 
@@ -155,6 +156,7 @@ export default function MiniDrawer() {
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
+              onClick={()=>navigate(('/'))}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',

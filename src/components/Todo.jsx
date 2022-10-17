@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './Todo.css'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Input } from '@mui/material';
+import axios from "axios";
+import Pagination from '@mui/material/Pagination';
 
 const style = {
     position: 'absolute',
@@ -30,7 +32,15 @@ export const TodoApp=()=>{
     const [update,setUpdate]=useState("")
     const [edit, setEdit]=useState(null)
     //add function
-                    
+    const [page, setPage] = useState(1);                
+    const [fetchdata,setfetchData]=useState([])
+    const [total,setTotal]=useState(0)
+    const [count,setCount]=useState(0)
+const handlePage=(page)=>{
+ 
+  console.log(page,"page")
+  setPage(page)
+}
     //for on key enter data
     const onKeyEnter=(event)=>{
         if(event.key=='Enter'){
@@ -42,34 +52,7 @@ export const TodoApp=()=>{
         }
 
     }
-    //function for delete 
-    // console.log(update)
-    // const handleEdit=(event,id)=>{
-    // handleUpdate(event,id)
-
-    // }
-    // //function to perform update opertations
-    // const handleUpdate=(event,el)=>{
-    //   debugger
-    //      console.log(data,"data")
-    //      console.log(data.indexOf(el),"index")
-    //       setEdit(data.indexOf(el))
-    //         console.log(update,'update')
-    //     if(event.key ==="Enter")
-    //       {
-    //         debugger
-    //       console.log("before")
-    //       console.log(edit, "<<==Edit")
-    //         console.log(data.indexOf(el),"newindex")
-    //         console.log(data,"array")
-          
-    //         data.forEach((items,ind)=>{
-    //          console.log(ind,'ind')
-    //          })
-    //     }
-       
-
-    // }
+   
 const handleEdit=(e,el)=>{
   // console.log(data)
   // debugger
@@ -90,7 +73,25 @@ const handleEdit=(e,el)=>{
          const filteredData=data.filter((items)=>items!=el)
          setData(filteredData)
     }
+
+    // for fetch data
+    const FetchData=(page)=>{
     
+      axios.get(`https://apnastore123.herokuapp.com/products`,{
+        params:{
+         _page:page,
+         _limit:10
+        }
+      })
+      .then((res)=>{
+        setfetchData(res.data)
+        setTotal(res.data.length)
+      })
+    }
+    useEffect(()=>{
+          FetchData(page)
+    },[page])
+    console.log(fetchdata,"fetched",'total=>',total)
     return(
         <>
      <div className="inputtag">
@@ -144,7 +145,28 @@ const handleEdit=(e,el)=>{
           }
          
            </div>
-        
+        <div>
+
+
+          <h3>items to be displayed here for pagination</h3>
+          <div>
+            {fetchdata?.map((el,ind)=>{
+              return(
+                <div>
+                  {el.title}
+                </div>
+              )
+            })}
+              <div style={{margin:"auto" ,border:"1px solid grey" ,paddingLeft:"40%"
+}}>
+              <Pagination 
+            
+            count={total}
+            onChange={(event, value) => handlePage(value)}
+             />
+              </div>
+          </div>
+        </div>
     
         </>
     )
