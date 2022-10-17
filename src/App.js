@@ -4,14 +4,15 @@ import { RoutesApp } from './components/AllRoutes/RoutesApp';
 import { Copy } from './components/Copy';
 import MiniDrawer from './components/PersistentDrawer';
 import PersistentDrawerLeft from './components/PersistentDrawer';
+import { PortalNavbar } from './components/PortalNavbar';
 
 
 
 function App() {
   return (
     <div className="App">
- <RoutesApp/>
-
+ {/* <RoutesApp/> */}
+<PortalNavbar/>
  {/* <MiniDrawer/> */}
      
     </div>
