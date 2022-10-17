@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './PortalNavbar.css'
 import {GiHamburgerMenu} from 'react-icons/gi'
+import MenuListComposition from './MaterialCom'
 export const PortalNavbar = () => {
-    const [showAcc,setshowAcc]=useState(false)
+    // const [showAcc,setshowAcc]=useState(false)
     const [showRep,setshowRep]=useState(false)
   return (
    <>
@@ -14,11 +15,12 @@ export const PortalNavbar = () => {
             className='image-class' src="https://media-exp1.licdn.com/dms/image/C4D0BAQGB9k6sQMCs0Q/company-logo_200_200/0/1612510821067?e=2147483647&v=beta&t=Y4GsrIbGVTmj0LzNQCS0ShIa4dtPiMb41rQV2mH6SBU" alt="" />
         </div>
         <div className='drop-down-account'
-       onClick={() => { setshowAcc(true); setshowRep(false);}}
-       >Account Details
+    //    onClick={() => { setshowAcc(true); setshowRep(false);}}
+       >
+        <MenuListComposition/>
         </div>
         <div className='drop-down-reports'
-       onClick={() => { setshowAcc(false); setshowRep(true);}}>Account Reports</div>
+       onClick={() =>  setshowRep(true)}>Account Reports</div>
     </div>
     <div className='navbar-sec2'>
         <div className='items'>
@@ -33,7 +35,7 @@ export const PortalNavbar = () => {
     
    </div>
 <div className='main'>
-{showAcc?   <div 
+{/* {showAcc?   <div 
 onMouseLeave={()=>setshowAcc(false)}
 className='dropdown-menu-account'>
 <div className='list-items'>account management</div>
@@ -42,7 +44,7 @@ className='dropdown-menu-account'>
 <div className='list-items'> account details </div>
 <div className='list-items'>account holder details</div>
 <div className='list-items'>account active inactive status</div>
-</div>:""}
+</div>:""} */}
 {
     showRep?<div
     onMouseLeave={()=>setshowRep(false)}
