@@ -36,12 +36,23 @@ export const PortalNavbar = () => {
 {showAcc?   <div 
 onMouseLeave={()=>setshowAcc(false)}
 className='dropdown-menu-account'>
-
+<div className='list-items'>account management</div>
+<div className='list-items'>account status</div>
+<div className='list-items'>account active inactive status</div>
+<div className='list-items'> account details </div>
+<div className='list-items'>account holder details</div>
+<div className='list-items'>account active inactive status</div>
 </div>:""}
 {
     showRep?<div
     onMouseLeave={()=>setshowRep(false)}
      className='dropdown-menu-reports'>
+        <div className='list-items'>account management</div>
+<div className='list-items'>account status</div>
+<div className='list-items'>account active inactive status</div>
+<div className='list-items'> account details </div>
+<div className='list-items'>account holder details</div>
+<div className='list-items'>account active inactive status</div>
     </div>:""
 }
 </div>

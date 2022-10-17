@@ -1,90 +1,111 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.navbar-main{
-    height: 60px;
-    width: 100%;
+
+.navbar-main {
+  height: 60px;
+  width: 100%;
   display: flex;
-    border: 1px solid grey;
- align-items: center;
-   
+  border: 1px solid grey;
+  align-items: center;
+  background-color: black;
+  color: white;
+
 }
-.navbar-sec1{
-    display: flex;
-align-items: center;
-  
+
+.navbar-sec1 {
+  display: flex;
+  align-items: center;
+
   height: 100%;
   width: 30%;
   justify-content: space-around;
 
 }
-.navbar-sec2{
-    display: flex;
-justify-content: flex-end;
-  
+
+.navbar-sec2 {
+  display: flex;
+  justify-content: flex-end;
+
   align-items: center;
- 
-    height: 100%;
-    width: 70%; 
-}
-.searchbar{
-    height: 50%;
-    border-radius: 10px;
-    height: 30px;
-    border: 1px solid lightgray;
-   
-    background-color: whitesmoke;
 
-}
-.items{
-    display: -webkit-flex;
-	display: flex;
-	margin:5%;
-	box-sizing:border-box;
-}
-.hamburge{
-   visibility: hidden;
-   
+  height: 100%;
+  width: 70%;
 }
 
-.image-class{
-  
-height: 50px;
- 
+.searchbar {
+  height: 50%;
+  border-radius: 10px;
+  height: 30px;
+  border: 1px solid lightgray;
+
+  background-color: whitesmoke;
+
 }
+
+.items {
+  display: -webkit-flex;
+  display: flex;
+  margin: 5%;
+  box-sizing: border-box;
+}
+
+.hamburge {
+  visibility: hidden;
+
+}
+
+.image-class {
+
+  height: 50px;
+
+}
+
 @media only screen and (max-width: 700px) {
-   .navbar-sec2{
-   width: 10%;
-  
-   }
-   .items{
+  .navbar-sec2 {
+    width: 10%;
+
+  }
+
+  .items {
     display: none;
-   }
-   .hamburge{
-      visibility: visible;
-   }
-   .navbar-sec1{
+  }
+
+  .hamburge {
+    visibility: visible;
+  }
+
+  .navbar-sec1 {
     width: 90%;
-   }
   }
-  .dropdown-menu-account{
-    height: 300px;
-    width: 200px;
-    border: 1px solid grey;
-    background-color: white;
-    box-shadow: whitesmoke;
-     margin-left: 6%;
-     margin-top: 5px;
-  }
- .dropdown-menu-reports{
+}
+
+.dropdown-menu-account {
   height: 300px;
-  width: 200px;
-  border: 1px solid grey;
-  background-color: white;
-  box-shadow: whitesmoke;
+  width: 250px;
  
-margin-bottom: 100px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-left: 6%;
+  margin-top: 5px;
+}
+
+.dropdown-menu-reports {
+  height: 300px;
+  width: 250px;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+  margin-bottom: 100px;
   position: absolute;
-   margin-top: 5px;
-   margin-left: 23%;
- }
+  margin-top: 5px;
+  margin-left: 23%;
+}
+.list-items{
+  height: 16.6%;
+  width: 100%;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding-top: 9px;
+  text-align: center;
+}
