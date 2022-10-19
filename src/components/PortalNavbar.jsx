@@ -3,17 +3,22 @@ import './PortalNavbar.css'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import MenuListComposition from './MaterialCom'
 import CustomizedMenus from './FlyOut'
+import HomeIcon from '@mui/icons-material/Home';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import HttpsIcon from '@mui/icons-material/Https';
+import ArticleIcon from '@mui/icons-material/Article';
+import CachedIcon from '@mui/icons-material/Cached';
 export const PortalNavbar = () => {
     // const [showAcc,setshowAcc]=useState(false)
     const [showRep,setshowRep]=useState(false)
   return (
    <>
-   <h3>Portal navbar</h3>
+
    <div className='navbar-main'>
     <div className='navbar-sec1'>
-        <div className='image-class'>
-            <img
-            className='image-class' src="https://media-exp1.licdn.com/dms/image/C4D0BAQGB9k6sQMCs0Q/company-logo_200_200/0/1612510821067?e=2147483647&v=beta&t=Y4GsrIbGVTmj0LzNQCS0ShIa4dtPiMb41rQV2mH6SBU" alt="" />
+        <div className='drop-down-reports'>
+          <span>FinMobiConnect</span>
         </div>
         <div className='drop-down-account'
     //    onClick={() => { setshowAcc(true); setshowRep(false);}}
@@ -22,16 +27,26 @@ export const PortalNavbar = () => {
         </div>
      
         <div className='drop-down-reports'
-       onClick={() =>  setshowRep(true)}>Account Reports</div>
+       onClick={() =>  setshowRep(true)}>Users menu</div>
+
+          <div className='drop-down-reports'
+       onClick={() =>  setshowRep(true)}>Test</div>
+
+<div className='drop-down-reports'
+       onClick={() =>  setshowRep(true)}>Reports menu</div>
     </div>
+    
     <div className='navbar-sec2'>
-        <div className='items'>
-            <input type="text"  className='searchbar'
-            placeholder='search here'/>
-        </div>
-        <div className='items'>setting</div>
-        <div className='items'>user2</div>
-        <div className='items'>user3</div>
+       
+        <div className='items'><HttpsIcon sx={{backgroundColor:'white', color:'black'}}/></div>
+        <div className='items'><CachedIcon sx={{backgroundColor:'white', color:'black'}}/></div>
+   
+        <div className='items'><ArrowCircleLeftIcon sx={{backgroundColor:'skyblue'}}/></div>
+        <div className='items'><ArrowCircleRightIcon  sx={{backgroundColor:'skyblue'}}/></div>
+        <div className='items'><ArticleIcon sx={{backgroundColor:'white', color:'black'}}/></div>
+        <div className='items'><HomeIcon sx={{backgroundColor:'green'}}/></div>
+     
+        <div className='items'><span style={{color:"green", fontWeight:"bolder"}}>logout</span></div>
      <div className='hamburge'>   <GiHamburgerMenu className='hamburge'></GiHamburgerMenu></div>
     </div>
     
@@ -47,7 +62,7 @@ className='dropdown-menu-account'>
 <div className='list-items'>account holder details</div>
 <div className='list-items'>account active inactive status</div>
 </div>:""} */}
-{
+{/* {
     showRep?<div
     onMouseLeave={()=>setshowRep(false)}
      className='dropdown-menu-reports'>
@@ -70,7 +85,7 @@ className='dropdown-menu-account'>
 <CustomizedMenus className='Account-management'/>
 </div>
     </div>:""
-}
+} */}
 </div>
    </>
   )

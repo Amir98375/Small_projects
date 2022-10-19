@@ -14,6 +14,7 @@ import "./materialcom.css"
 
 const StyledMenu = styled((props) => (
   <Menu
+ 
     elevation={0}
     anchorOrigin={{
       vertical: 'bottom',
@@ -39,8 +40,9 @@ const StyledMenu = styled((props) => (
     '& .MuiMenuItem-root': {
       '& .MuiSvgIcon-root': {
         fontSize: 6,
-        color: theme.palette.text.secondary,
+        color: theme.palette.text.primary,
         marginLeft: theme.spacing(12),
+        backgroundColor:'black'
       },
       '&:active': {
         backgroundColor: alpha(
@@ -58,6 +60,9 @@ export default function CustomizedMenus() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+const [arr,setarr]=React.useState(['edit','duplicate','archive','more','bank'])
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -76,7 +81,7 @@ export default function CustomizedMenus() {
            variant="contained"
            disableElevation
            onClick={handleClick}
-         
+        
            color={"white"}
           //  style={{marginRight:"100px"}}
          />
@@ -89,25 +94,24 @@ export default function CustomizedMenus() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+     
         
       >
-        <MenuItem onClick={handleClose} disableRipple>
-         
-          Edit
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-        
-          Duplicate
-        </MenuItem>
-      
-        <MenuItem onClick={handleClose} disableRipple>
-        
-          Archive
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-        
-          More
-        </MenuItem>
+        {
+          arr.map((el)=>{
+            return(
+              <MenuItem onClick={handleClose} disableRipple 
+              fontSize={"small"}
+              >
+               
+                {el}
+              </MenuItem>
+            )
+              
+            
+          })
+        }
+   
       </StyledMenu>
     </div>
   );

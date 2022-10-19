@@ -67,8 +67,13 @@ const handleStateChange=()=>{
           aria-expanded={open ? 'true' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
+       sx={{
+        color:"white",
+        fontSize:"10px",
+        paddingTop:"10px"
+       }}
         >
-          Dashboard
+          Masters menu
         </Button>
         <Popper
      
@@ -83,7 +88,8 @@ const handleStateChange=()=>{
             <Grow
             sx={{
               backgroundColor:"black",
-              color:"white"
+              color:"white",
+             
             }}
               {...TransitionProps}
               style={{
@@ -102,7 +108,7 @@ const handleStateChange=()=>{
                    
                     <MenuItem onClick={handleStateChange}  >
                       <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                    <div className="">
+                    <div className="" style={{fontSize:"10px"}}>
                     account active inactive status
                     </div>
                     <div className="">
@@ -115,7 +121,7 @@ const handleStateChange=()=>{
                   
                     <MenuItem>
                     <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                    <div className="">
+                    <div className="" style={{fontSize:"10px"}}>
                     account holder details
                     </div>
                     <div className="">
@@ -126,7 +132,7 @@ const handleStateChange=()=>{
                     <MenuItem >
                     
                     <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                    <div className="">
+                    <div className="" style={{fontSize:"10px"}}>
                     account management
                     </div>
                     <div className="">
@@ -137,7 +143,7 @@ const handleStateChange=()=>{
                     </MenuItem>
                      <MenuItem >
                      <div className="" style={{display: "flex", alignItems: "spaceBetween"}}>
-                     <div>
+                     <div style={{fontSize:"10px"}}>
                      account active inactive status
                      </div>
                      <div className="">
@@ -147,7 +153,7 @@ const handleStateChange=()=>{
                      </MenuItem>
                     <MenuItem >
                      <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                    <div className="">
+                    <div className="" style={{fontSize:"10px"}}>
                     account holder details
                     </div>
                     <div className="">
@@ -158,10 +164,10 @@ const handleStateChange=()=>{
                     <MenuItem >
 
                      <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                    <div className="">
+                    <div className="" style={{fontSize:"10px"}}>
                     account management
                     </div>
-                    <div className="">
+                    <div className="" >
                     {buttonState?<CustomizedMenus/>:""}
                     </div>
                     </div>

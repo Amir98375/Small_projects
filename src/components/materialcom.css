@@ -5,4 +5,8 @@
 
 .MuiPaper-rounded{
   margin-left: 16px !important;
+  background-color: black !important;
+  color: white !important;
+  font-size: small !important;
+
 }

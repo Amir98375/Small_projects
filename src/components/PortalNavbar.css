@@ -16,11 +16,11 @@
 .navbar-sec1 {
   display: flex;
   align-items: center;
-  
+  justify-content: flex-start;
 
   height: 100%;
-  width: 30%;
-  justify-content: space-around;
+  width: 75%;
+
 
 }
 
@@ -31,9 +31,12 @@
   align-items: center;
 
   height: 100%;
-  width: 70%;
+  width: 25%;
 }
+#drop-down-reports1{
+  font-size: larger;
 
+}
 .searchbar {
   height: 50%;
   border-radius: 10px;
@@ -71,18 +74,21 @@
 .dropdown-menu-account {
   height: 300px;
   width: 250px;
-  background-color: white;
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   margin-left: 6%;
   margin-top: 5px;
+  color: white;
 }
 .dropdown-menu-reports {
-  height: 300px;
+
   width: 250px;
   margin-bottom: 100px;
   position: absolute;
   margin-top: 5px;  
-
+  color:white;
+  background-color: black;
+  font-size: 10px;
 }
 .list-items{
   height: 16.6%;
@@ -119,4 +125,8 @@ select{
 }
 option{
   border: none;
+}
+.drop-down-reports{
+  font-size: small;
+  margin-left: 10px;
 }
