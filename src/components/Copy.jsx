@@ -64,7 +64,7 @@ const increament=()=>{
          clipboard and this will be copied'
       ></textarea>
     </form>
-    <h3>Useref implementation below</h3>
+    <h3>Useref implementation </h3>
     <div>
         
         <p>{refrence.current}</p>
