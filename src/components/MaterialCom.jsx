@@ -7,10 +7,20 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
+import { Select } from '@mui/material';
+import { OptionGroupUnstyled } from '@mui/base';
+import { useState } from 'react';
+import CustomizedMenus from './FlyOut';
+import "./materialcom.css";
 
 export default function MenuListComposition() {
+  const [buttonState,setbuttonState]=useState(false)
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef()
+
+const handleStateChange=()=>{
+       setbuttonState(true)
+}
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -47,9 +57,9 @@ export default function MenuListComposition() {
   }, [open]);
 
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack direction="row"  >
    
-      <div>
+      <div  >
         <Button
           ref={anchorRef}
           id="composition-button"
@@ -61,6 +71,7 @@ export default function MenuListComposition() {
           Dashboard
         </Button>
         <Popper
+     
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
@@ -70,10 +81,14 @@ export default function MenuListComposition() {
         >
           {({ TransitionProps, placement }) => (
             <Grow
+            sx={{
+              backgroundColor:"black",
+              color:"white"
+            }}
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === 'bottom-start' ? 'left top' : 'left bottom',
+                  placement === 'bottom-start' ? 'left top' : 'right bottom',
               }}
             >
               <Paper>
@@ -82,14 +97,75 @@ export default function MenuListComposition() {
                     autoFocusItem={open}
                     id="composition-menu"
                     aria-labelledby="composition-button"
-                    onKeyDown={handleListKeyDown}
+                    // onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>account active inactive status</MenuItem>
-                    <MenuItem onClick={handleClose}>account holder details</MenuItem>
-                    <MenuItem onClick={handleClose}>account management</MenuItem>
-                     <MenuItem onClick={handleClose}>account active inactive status</MenuItem>
-                    <MenuItem onClick={handleClose}>account holder details</MenuItem>
-                    <MenuItem onClick={handleClose}>account management</MenuItem>
+                   
+                    <MenuItem onClick={handleStateChange}  >
+                      <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div className="">
+                    account active inactive status
+                    </div>
+                    <div className="">
+                    {buttonState?<CustomizedMenus/>:""}
+                    </div>
+                    </div>
+                    
+                  </MenuItem>
+                 
+                  
+                    <MenuItem>
+                    <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div className="">
+                    account holder details
+                    </div>
+                    <div className="">
+                    {buttonState?<CustomizedMenus/>:""}
+                    </div>
+                    </div>
+                    </MenuItem>
+                    <MenuItem >
+                    
+                    <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div className="">
+                    account management
+                    </div>
+                    <div className="">
+                    {buttonState?<CustomizedMenus/>:""}
+                    </div>
+                    </div>
+                  
+                    </MenuItem>
+                     <MenuItem >
+                     <div className="" style={{display: "flex", alignItems: "spaceBetween"}}>
+                     <div>
+                     account active inactive status
+                     </div>
+                     <div className="">
+                     {buttonState?<CustomizedMenus/>:""}
+                     </div>
+                     </div>
+                     </MenuItem>
+                    <MenuItem >
+                     <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div className="">
+                    account holder details
+                    </div>
+                    <div className="">
+                    {buttonState?<CustomizedMenus/>:""}
+                    </div>
+                    </div>
+                     </MenuItem>
+                    <MenuItem >
+
+                     <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div className="">
+                    account management
+                    </div>
+                    <div className="">
+                    {buttonState?<CustomizedMenus/>:""}
+                    </div>
+                    </div>
+                 </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

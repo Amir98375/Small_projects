@@ -1,0 +1,8 @@
+.space_bw{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.MuiPaper-rounded{
+  margin-left: 16px !important;
+}

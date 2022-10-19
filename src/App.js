@@ -7,6 +7,8 @@ import PersistentDrawerLeft from './components/PersistentDrawer';
 import { PortalNavbar } from './components/PortalNavbar';
 import {Stack} from './components/Stack'
 import MenuListComposition from './components/MaterialCom';
+import { CardShow } from './components/CardShow';
+
 
 
 
@@ -17,7 +19,7 @@ function App() {
 <PortalNavbar/>
 
  {/* <MiniDrawer/> */}
-     
+ 
     </div>
   );
 }

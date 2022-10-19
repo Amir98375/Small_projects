@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './PortalNavbar.css'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import MenuListComposition from './MaterialCom'
+import CustomizedMenus from './FlyOut'
 export const PortalNavbar = () => {
     // const [showAcc,setshowAcc]=useState(false)
     const [showRep,setshowRep]=useState(false)
@@ -19,6 +20,7 @@ export const PortalNavbar = () => {
        >
         <MenuListComposition/>
         </div>
+     
         <div className='drop-down-reports'
        onClick={() =>  setshowRep(true)}>Account Reports</div>
     </div>
@@ -49,12 +51,24 @@ className='dropdown-menu-account'>
     showRep?<div
     onMouseLeave={()=>setshowRep(false)}
      className='dropdown-menu-reports'>
-        <div className='list-items'>account management</div>
-<div className='list-items'>account status</div>
-<div className='list-items'>account active inactive status</div>
-<div className='list-items'> account details </div>
-<div className='list-items'>account holder details</div>
-<div className='list-items'>account active inactive status</div>
+        <div className='list-items'>account management 
+        <CustomizedMenus className='Account management'/>
+        </div>
+<div className='list-items'>account status
+<CustomizedMenus className='Account management'/>
+</div>
+<div className='list-items'>account active  status
+<CustomizedMenus className='Account-management'/>
+</div>
+<div className='list-items'> account details
+<CustomizedMenus className='Account management'/>
+ </div>
+<div className='list-items'>account holder details
+<CustomizedMenus className='Account management'/>
+</div>
+<div className='list-items'>account active inactive
+<CustomizedMenus className='Account-management'/>
+</div>
     </div>:""
 }
 </div>
