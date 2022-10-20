@@ -144,7 +144,7 @@ const handleStateChange=()=>{
                      <MenuItem >
                      <div className="" style={{display: "flex", alignItems: "spaceBetween"}}>
                      <div style={{fontSize:"10px"}}>
-                     account active inactive status
+                    Account active inactive status
                      </div>
                      <div className="">
                      {buttonState?<CustomizedMenus/>:""}
