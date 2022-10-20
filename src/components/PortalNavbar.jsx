@@ -9,15 +9,34 @@ import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import HttpsIcon from '@mui/icons-material/Https';
 import ArticleIcon from '@mui/icons-material/Article';
 import CachedIcon from '@mui/icons-material/Cached';
+import NestedMenu from './DropDown'
 export const PortalNavbar = () => {
     // const [showAcc,setshowAcc]=useState(false)
     const [showRep,setshowRep]=useState(false)
+    const [showTest,setshowTest]=useState(false)
+    const [showUsersMenu,setshowUsersMenu]=useState(false)
+
+    const handlereports=()=>{
+             setshowRep(true)
+             setshowTest(false)
+             setshowUsersMenu(false)
+    }
+    const handleMenuUsers=()=>{
+      setshowRep(false)
+      setshowTest(false)
+      setshowUsersMenu(true)
+    }
+    const handleTest=()=>{
+      setshowRep(false)
+      setshowTest(true)
+      setshowUsersMenu(false)
+    }
   return (
    <>
 
    <div className='navbar-main'>
     <div className='navbar-sec1'>
-        <div className='drop-down-reports'>
+        <div className='drop-down-reports' id='drop-down-reports1'>
           <span>FinMobiConnect</span>
         </div>
         <div className='drop-down-account'
@@ -27,13 +46,18 @@ export const PortalNavbar = () => {
         </div>
      
         <div className='drop-down-reports'
-       onClick={() =>  setshowRep(true)}>Users menu</div>
+       
+       onClick={handleMenuUsers}>
+        <NestedMenu name={"Users menu"}/></div>
 
           <div className='drop-down-reports'
-       onClick={() =>  setshowRep(true)}>Test</div>
+       onClick={handleTest}>
+         <NestedMenu name={"Test"}/>
+       </div>
 
 <div className='drop-down-reports'
-       onClick={() =>  setshowRep(true)}>Reports menu</div>
+       onClick={handlereports}></div>
+       <NestedMenu name={"Menu reports"}/>
     </div>
     
     <div className='navbar-sec2'>
